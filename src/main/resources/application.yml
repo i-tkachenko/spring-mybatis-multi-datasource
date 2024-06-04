@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-mybatis-multi-datasource
+
+datasource:
+  archive-database:
+    jdbcUrl: jdbc:h2:mem:archive;INIT=RUNSCRIPT FROM 'classpath:/sql/archive-db-init-script.sql'
+    driverClassName: org.h2.Driver
+  central-database:
+    jdbcUrl: jdbc:h2:mem:central;INIT=RUNSCRIPT FROM 'classpath:/sql/central-db-init-script.sql'
+    driverClassName: org.h2.Driver
